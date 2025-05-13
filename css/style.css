@@ -1,3 +1,28 @@
-*{
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.fulldraw{
+    display: flex;
+}
+.name{
+    flex:1;
+}
+.draw-him {
+    background-color: aqua;
+}
+.stand{
+    width: 5;
+    background-color: black;
+    height: 100%;
+    left:89 ;
+    display: none;
+}
+.hang{
+ width: 5;
+ height: 50;
+ background-color: black;
+ left: 100%;
+
+
     
 }
