@@ -3,7 +3,13 @@ let letterInside = document.querySelector(".letters");
 
 letters.forEach(letter =>{
    let theSpan = document.createElement("span");
-theSpan.textContent = letters; 
+theSpan.textContent = letter; 
 
+
+
+  letterInside.appendChild(theSpan);
 
 })
+const theWords =  ["apple","cherry","banana","berry"];
+  
+
