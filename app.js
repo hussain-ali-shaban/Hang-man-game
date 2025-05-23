@@ -1,25 +1,28 @@
-//const keyboard = querySelector(".kbd");
+const keyboard =document.querySelector(".theletters");
 
-for(i=0;i<=26;i++){
-    
+   if (keyboard){
+      for(let i=97;i<=122;i++){
+        const createButton = document.createElement("button");
+        const theLetter = String.fromCharCode(i);
+        createButton.innerText=theLetter;
 
-}
+        createButton.addEventListener("click",function(){
+          const guessedLetter = this.innerText;
+           console.log("you click:",guessedLetter);
+        })
+         keyboard.appendChild(createButton);
+      }
+       
+   }
 
 
 
 
-const letters =["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p","q","r","s","t","u","v","w","x","y","z"];
-let letterInside = document.querySelector(".letters");
-
-letters.forEach(letter =>{
-    let theSpan = document.createElement("span");
- theSpan.textContent = letter; 
 
 
 
-  //  letterInside.appendChild(theSpan);
 
- })
+ 
 const theWords =  ["apple","cherry","banana","berry"];
 
 document.addEventListener('keypress',(event) => {
