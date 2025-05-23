@@ -13,43 +13,29 @@ const keyboard =document.querySelector(".theletters");
          keyboard.appendChild(createButton);
       }
        
-   }
-
-
-
-
-
-
-
-
- 
+    }
 const theWords =  ["apple","cherry","banana","berry"];
+const randomWord =Math.floor(Math.random() * theWords.length);
+const choosenWord = theWords[randomWord];
+console.log(choosenWord); 
 
-document.addEventListener('keypress',(event) => {
-  console.log(event.key.toLowerCase());
-});
-  console.log(theWords)
+ const dis = document.querySelector(".display-word");
 
-// const lettersInWord = word.length;
-
- theWords.forEach(word => {
-if( word==='apple'|| word==='berry'){
-    console.log('- - - - -')
-    console.log(word)
+ for(i=0;i>choosenWord.length;i++){
+  const li = document.createElement("li");
+  li.classList.add("letter");
+  li.textContent = "_";
+  dis.appendChild(li);
  }
-  if (  word=== 'cherry'|| word==='banana'){
-   console.log('- - - - - -')
-  console.log(word)
-  } }) 
-
+let letter1 = Array.from(choosenWord);
+  
+ console.log(letter1);    
+  
+ 
  
   
 
-
- 
- 
-
- 
+  
 
 
     
