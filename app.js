@@ -1,7 +1,10 @@
+const hangmanimg = document.querySelector(".hangman-view img")
 const keyboard =document.querySelector(".theletters");
 const dis = document.querySelector(".display-word");
 let chword = "";
+let wrongLetter=0;
 let thisWord;
+const chances = 6;
    if (keyboard){
       for(let i=97;i<=122;i++){
         const createButton = document.createElement("button");
@@ -18,10 +21,16 @@ let thisWord;
     
     const initGame = (createButton,clickedLetter) =>{
       if(thisWord.includes(clickedLetter)){
-        console.log(clickedLetter,"right letter");
-      }
+       [...thisWord].forEach((letter,index)=>{
+          if(letter===clickedLetter){
+            dis.querySelectorAll("li")[index].innerText=letter;
+             dis.querySelectorAll("li")[index].classList.add("guessed")
+          }
+       }
+      )}
       else{
-        console.log(clickedLetter,"wrong letter");
+       wrongLetter++;
+       hangmanimg.src = `images/hangman-${wrongLetter}.jpg`
       }}
     
     const randomly = () =>{
@@ -42,7 +51,13 @@ console.log(choosenWord);
 let letter1 = Array.from(choosenWord);
    console.log(letter1);
 }
-randomly();
+document.getElementById("restart").addEventListener("click",() => {
+ location.reload();
+  
+ 
+})
+ randomly();
+
  
 
   
