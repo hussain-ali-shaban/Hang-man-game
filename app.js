@@ -1,4 +1,4 @@
-const keyboard = querySelector(".kbd");
+//const keyboard = querySelector(".kbd");
 
 for(i=0;i<=26;i++){
     
