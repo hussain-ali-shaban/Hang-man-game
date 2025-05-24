@@ -13,13 +13,13 @@ const chances = 6;
 
         
             keyboard.appendChild(createButton);
-            createButton.addEventListener("click",h =>initGame(h.target,String.fromCharCode(i)));
+            createButton.addEventListener("click",h =>startGame(h.target,String.fromCharCode(i)));
         };
         
       }
        
     
-    const initGame = (createButton,clickedLetter) =>{
+    const startGame = (createButton,clickedLetter) =>{
       if(thisWord.includes(clickedLetter)){
        [...thisWord].forEach((letter,index)=>{
           if(letter===clickedLetter){
